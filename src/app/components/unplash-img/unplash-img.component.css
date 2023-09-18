@@ -33,10 +33,17 @@
 }
 
 /*Responsive*/
+/* For mobile phones: */
+.imgConten{
+  column-count: 2;
+  column-width: auto;
+  margin-top: 4rem;
+}
+
 @media only screen and (min-width: 600px) {
   /* For tablets: */
   .imgConten{
-    column-count: 2;
+    column-count: 3;
     column-width: auto;
     margin-top: 4rem;
   }
