@@ -5,7 +5,7 @@ const environment = argv.environment;
 
 let apiKey;
 let targetPath;
-if (environment == 'prod') {
+if (environment === 'prod') {
     apiKey = process.env.unplashKey;
     targetPath = `./src/environments/environment.prod.ts`;
 } else {
