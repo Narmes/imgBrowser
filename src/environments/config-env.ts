@@ -1,25 +1,27 @@
-const fs = require('fs');
-require('dotenv').config();
-const { argv } = require('yargs');
-const environment = argv.environment;
-
-let apiKey;
-let targetPath;
-if (environment === 'prod') {
-    apiKey = process.env.unplashKey;
-    targetPath = `./src/environments/environment.prod.ts`;
-} else {
-    apiKey = process.env.unplashKey;
-    targetPath = `./src/environments/environment.ts`;
-}
-
-const envConfigFile = `
-export const environment = {
-    production: false,
-    unplashKey: "${apiKey}",};`;
-
-fs.writeFile(targetPath, envConfigFile, function (err: any) {
-    if (err) {
-        console.log(err);
-    }
-});
+const setEnv = () => {
+    const fs = require('fs');
+    const writeFile = fs.writeFile;
+  // Configure Angular `environment.ts` file path
+    const targetPath = './src/environments/environment.ts';
+  // Load node modules
+    require('dotenv').config({
+      path: 'src/environments/.env'
+    });
+  // `environment.ts` file structure
+    const envConfigFile = `export const environment = {
+    unplashKey: '${process.env.UNPLAS_KEY}',
+    production: true,
+  };
+  `;
+    writeFile(targetPath, envConfigFile, (err:any) => {
+      if (err) {
+        console.error(err);
+        throw err;
+      } else {
+        console.log(`Angular environment.ts file generated correctly at ${targetPath} \n`);
+      }
+    });
+  };
+  
+  setEnv();
+  
