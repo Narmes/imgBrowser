@@ -2,14 +2,14 @@ const setEnv = () => {
     const fs = require('fs');
     const writeFile = fs.writeFile;
   // Configure Angular `environment.ts` file path
-    const targetPath = './src/environments/environment.prod.ts';
+    const targetPath = './src/environments/environment.ts';
   // Load node modules
     require('dotenv').config({
       path: 'src/environments/.env'
     });
   // `environment.ts` file structure
     const envConfigFile = `export const environment = {
-    unplashKey: '${process.env.UNPLAS_KEY}',
+    unplashKey: '${process.env.UNPLASH_KEY}',
     production: true,
   };
   `;
