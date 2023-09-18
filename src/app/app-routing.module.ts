@@ -6,7 +6,7 @@ const routes: Routes = [
     path:'', redirectTo: 'apiUnplash/searchImg', pathMatch:'full',
   },
   {
-    path:'apiUnplash', 
+    path:'apiUnplash',
     loadChildren: ()=> import('./components/components.module').then(m=>m.ComponentsModule)
   },
   {

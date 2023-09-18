@@ -8,6 +8,9 @@ const routes: Routes = [
     children:[
       {
         path:'searchImg', component:UnplashImgComponent
+      },
+      {
+        path:'**', redirectTo:'searchImg',
       }
     ]
   }

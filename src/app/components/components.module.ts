@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 import { ComponentsRoutingModule } from './components-routing.module';
 import { UnplashImgComponent } from './unplash-img/unplash-img.component';
@@ -10,7 +9,6 @@ import { UnplashImgComponent } from './unplash-img/unplash-img.component';
     UnplashImgComponent
   ],
   imports: [
-    CommonModule,
     ComponentsRoutingModule,
   ]
 })
