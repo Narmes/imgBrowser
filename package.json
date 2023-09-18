@@ -5,8 +5,8 @@
     "ng": "ng",
     "start-vercel": "npm run config -- --environment=dev && ng serve",
     "build-vercel": "npm run config -- --environment=prod && ng build",
-    "start": "ng serve",
-    "build": "node config-env.ts && ng build",
+    "start": "ts-node ./src/config-env.ts && ng serve",
+    "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
