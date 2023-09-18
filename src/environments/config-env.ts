@@ -2,7 +2,7 @@ const setEnv = () => {
     const fs = require('fs');
     const writeFile = fs.writeFile;
   // Configure Angular `environment.ts` file path
-    const targetPath = './src/environments/environment.ts';
+    const targetPath = './src/environments/environment.prod.ts';
   // Load node modules
     require('dotenv').config({
       path: 'src/environments/.env'
