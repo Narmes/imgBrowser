@@ -10,7 +10,7 @@ if (environment === 'prod') {
     targetPath = `./src/environments/environment.prod.ts`;
 } else {
     apiKey = process.env.unplashKey;
-    targetPath = `./src/environments/environment.ts`;
+    targetPath = `./src/environments/environment.prod.ts`;
 }
 
 const envConfigFile = `
