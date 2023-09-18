@@ -32,10 +32,23 @@
   border-color: blue;
 }
 
-.imgConten{
-  column-count: 4;
-  column-width: auto;
-  margin-top: 4rem;
+/*Responsive*/
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .imgConten{
+    column-count: 2;
+    column-width: auto;
+    margin-top: 4rem;
+  }
+
+  @media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .imgConten{
+      column-count: 4;
+      column-width: auto;
+      margin-top: 4rem;
+    }
+  }
 }
 
 
