@@ -15,7 +15,7 @@ const setEnv = () => {
   production: true,
 };
 `;
-  console.log(colors.magenta('The file `environment.ts` will be written with the following content: \n'));
+  console.log('The file `environment.ts` will be written with the following content: \n');
   writeFile(targetPath, envConfigFile, (err:any) => {
     if (err) {
       console.error(err);
