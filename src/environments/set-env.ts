@@ -21,7 +21,7 @@ const setEnv = () => {
       console.error(err);
       throw err;
     } else {
-      console.log(colors.magenta(`Angular environment.ts file generated correctly at ${targetPath} \n`));
+      console.log(`Angular environment.ts file generated correctly at ${targetPath} \n`);
     }
   });
 };
